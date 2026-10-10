@@ -39,7 +39,7 @@ export function Header() {
             المدونة
           </Link>
           <TrackedCTA href={CHECKOUT_PATH} location="header" className="hidden sm:inline-flex">
-            اطلب الآن
+            اطلبي الآن
           </TrackedCTA>
         </nav>
       </div>
