@@ -1,0 +1,64 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    scroll-padding-top: 5rem;
+    -webkit-text-size-adjust: 100%;
+  }
+  body {
+    @apply bg-paper font-body text-lg leading-relaxed text-ink antialiased;
+  }
+  h1,
+  h2,
+  h3 {
+    /* لا نستخدم letter-spacing مع العربية لأنه يقطع اتصال الحروف */
+    @apply font-display font-bold leading-[1.35];
+  }
+  :focus-visible {
+    outline: 3px solid #5b4bff;
+    outline-offset: 3px;
+  }
+  @media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+      animation-duration: 0.01ms !important;
+      transition-duration: 0.01ms !important;
+      scroll-behavior: auto !important;
+    }
+  }
+}
+
+@layer components {
+  .container-nb {
+    @apply mx-auto w-full max-w-container px-4 sm:px-6;
+  }
+  .section-y {
+    @apply py-14 sm:py-20;
+  }
+  /* Blog / long-form typography */
+  .prose-blog {
+    @apply max-w-[68ch] text-lg leading-8;
+  }
+  .prose-blog h2 {
+    @apply mb-3 mt-10 text-3xl;
+  }
+  .prose-blog h3 {
+    @apply mb-2 mt-8 text-2xl;
+  }
+  .prose-blog p,
+  .prose-blog ul {
+    @apply my-4;
+  }
+  .prose-blog ul {
+    @apply list-disc ps-6;
+  }
+  .prose-blog a {
+    @apply font-semibold text-brand underline underline-offset-4;
+  }
+  .prose-blog code {
+    @apply rounded bg-brand-soft px-1.5 py-0.5 text-[0.9em];
+  }
+}

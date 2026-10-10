@@ -1,0 +1,4 @@
+-- Optional: make an existing auth user an admin (run in the Supabase SQL editor).
+-- update auth.users
+--   set raw_app_meta_data = coalesce(raw_app_meta_data, '{}'::jsonb) || '{"role":"admin"}'::jsonb
+--   where email = 'you@example.com';
