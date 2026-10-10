@@ -22,7 +22,7 @@ export function StickyCTA() {
           <span className="font-display text-lg font-bold">{formatPrice(product.unitPrice)}</span>
         </p>
         <TrackedCTA href={CHECKOUT_PATH} location="sticky" className="shrink-0">
-          اطلب الآن
+          اطلبي الآن
         </TrackedCTA>
       </div>
     </div>
